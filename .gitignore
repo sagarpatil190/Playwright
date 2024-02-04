@@ -7,3 +7,5 @@ node_modules/
 /allure-results/
 /my-allure-results/
 package-lock.json
+tests/specs/demo-todo-app.spec.ts
+tests/specs/example.spec.ts
