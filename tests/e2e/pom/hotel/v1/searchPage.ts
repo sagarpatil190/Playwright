@@ -26,8 +26,8 @@ export class SearchPage {
     this.autosuggestDropdownValue = this.autosuggestDropdown.getByTestId("option-0");
     
     this.inputDate = page.getByTestId('structured-search-input-field-split-dates-0');
-    this.inputDateFrom =  page.getByLabel('13, Tuesday, February');
-    this.inputDateTo =  page.getByLabel('14, Wednesday, February');
+    this.inputDateFrom =  page.getByLabel('16, Tuesday, April');
+    this.inputDateTo =  page.getByLabel('17, Wednesday, April');
     this.inputGuest =  page.getByTestId('structured-search-input-field-guests-button');
     this.inputGuestAdult =  page.getByTestId('stepper-adults-increase-button');
     this.inputGuestChild =  page.getByTestId('stepper-children-increase-button');
@@ -40,6 +40,8 @@ export class SearchPage {
         await this.btnStartExploring.click();
     }
    } 
+
+   
   async fillSearchData(searchTerm:any) {
 
     await this.inputWhere.fill(searchTerm.keyword);

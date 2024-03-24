@@ -8,7 +8,6 @@ export class ResultPage {
   constructor(page: Page) {
     this.page = page;
     this.results =  page.getByTestId("card-container");
-    
 }
 
    async getResultCount():Promise<number>{
@@ -16,4 +15,4 @@ export class ResultPage {
       await expect(this.results).toBeEnabled();
       return await this.results.count()    
    } 
-  }
+}
