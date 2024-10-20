@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 
 //dotenv.config();
 // Alternatively, read from "../my.env" file.
-dotenv.config({ path: path.resolve(process.cwd(), 'tests', 'qa.env') });
+dotenv.config({ path: path.resolve(process.cwd(), 'tests', 'Environment') });
 
 export const STORAGE_STATE = path.join(__dirname, 'playwright/.auth/user.json');
 
@@ -28,17 +28,11 @@ projects: [
   {
       name: 'e2e tests',
       use: { 
-          ...devices['Desktop Chrome'], 
-          storageState: STORAGE_STATE, 
-          
+          ...devices['Desktop Chrome'],         
       },
-      testMatch: '**/*loggedin.spec.ts',
+      testMatch: '**/*.spec.ts',
       dependencies: ['setup'],
       
-    },
-    {
-      name: 'e2e tests',
-      testIgnore: ['**/*loggedin.spec.ts', '**/*.setup.ts'],
-    },
+    }
   ],
 });

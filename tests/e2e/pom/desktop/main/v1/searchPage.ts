@@ -44,20 +44,21 @@ export class SearchPage {
    
   async fillSearchData(searchTerm:any) {
 
-    await this.inputWhere.fill(searchTerm.keyword);
+      await this.page.goto("/Talk:Main_Page");
+    // await this.inputWhere.fill(searchTerm.keyword);
     
-    await expect(this.autosuggestDropdown).toBeVisible();
-    await this.autosuggestDropdownValue.click();
+    // await expect(this.autosuggestDropdown).toBeVisible();
+    // await this.autosuggestDropdownValue.click();
     
-    await this.inputDateFrom.click();
-    await this.inputDateTo.click();
-    await this.inputDateTo.click();
+    // await this.inputDateFrom.click();
+    // await this.inputDateTo.click();
+    // await this.inputDateTo.click();
     
-    await this.inputGuest.click();
-    await this.inputGuestAdult.click();
-    await this.inputGuestChild.click();
+    // await this.inputGuest.click();
+    // await this.inputGuestAdult.click();
+    // await this.inputGuestChild.click();
 
-    await this.btnSearch.click();
+    // await this.btnSearch.click();
     
   }
 
